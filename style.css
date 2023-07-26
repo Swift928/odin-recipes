@@ -1,0 +1,48 @@
+.main {
+    background-color: rgb(201, 188, 188);
+}
+
+.main body, .dish body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main h3, .main h1 {
+    color: rgb(12, 12, 112);
+    text-decoration: underline;
+}
+
+.main li, .main a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.main button {
+    background-color: white;
+    font-size: 20px;
+    background-color: rgb(200, 191, 191);
+    color: blue;
+}
+
+.dish a {
+    text-decoration: none;
+}
+
+.dish button {
+    background-color: rgb(241, 241, 237);
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+body {
+font-size: 20px;
+}
+
+.dish {
+    background-color: beige;
+}
+
+.dish h3, .dish h1 {
+    color: green;
+    text-decoration: underline;
+}
