@@ -1,19 +1,52 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .main {
     background-color: rgb(201, 188, 188);
 }
 
-.main body, .dish body {
+.page {
+    margin-top: 70px;
+}
+
+body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.main h3, .main h1 {
+h1, h3 {
     color: rgb(12, 12, 112);
-    text-decoration: underline;
+    text-align: center;
+    margin: 35px auto;
 }
 
-.main li, .main a {
+.home-image {
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-list {
+    display: flex;
+    justify-content: flex-start;
     list-style: none;
+}
+
+.recipe-list li {
+    display: flex;
+    margin: 0 auto;
+}
+
+.dish a {
     text-decoration: none;
+    position: relative;
+    color: rgb(111, 149, 82);
+    font-size: x-large;
 }
 
 .main button {
@@ -23,19 +56,13 @@
     color: blue;
 }
 
-.dish a {
-    text-decoration: none;
+button {
+    padding: 0px;
 }
 
 .dish button {
     background-color: rgb(241, 241, 237);
-    font-size: 20px;
-    font-weight: bold;
     color: black;
-}
-
-body {
-font-size: 20px;
 }
 
 .dish {
@@ -46,3 +73,128 @@ font-size: 20px;
     color: green;
     text-decoration: underline;
 }
+
+.nodesc-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p {
+    border-bottom: 20px solid transparent;
+}
+
+.ing-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nodesc-container li:not(:last-child) {
+    padding-bottom: 5px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    align-items: center;
+}
+
+.menu-container {
+    display: flex;
+    height: 70px;
+    min-height: auto;
+    width: 100vw;
+    padding: 0 20px;
+    margin: 0;
+    background-color: inherit;
+    position: fixed;
+    box-shadow: 0 2px 1px rgb(15 72 26 / 10%);
+    top: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
+    align-items: center;
+}
+
+#dish-name {
+    margin: 20px 0;
+}
+
+.nodesc-container > div {
+    flex: 1;
+    padding: 0 20px;
+    flex-wrap: wrap; 
+}
+
+.desc {
+    flex: 2;
+    padding-right: 20px;
+}
+
+/* .desc-container:nth-child(2) {
+    align-items: center;
+} */
+
+.desc-container > div, .nodesc-container > div {
+    min-width: 400px;
+}
+
+.desc-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0px 20px;
+}
+
+.image {
+    flex: 0;
+    flex-shrink: 0;
+}
+
+#dish-img {
+    height: 100%;
+    max-width: 100%;
+}
+
+/* @media screen and (max-width: 800px) {
+    .desc-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #dish-image {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .ing-container {
+        list-style-type: none;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ing-container > li {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        list-style: none;
+    }
+
+    .steps-container > li {
+        padding: 0;
+        margin: 0;
+    }
+} */
