@@ -1,8 +1,8 @@
-html {
-    box-sizing: border-box;
-}
 
-*, *:before, *:after {
+*,
+*:before,
+*:after,
+html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -16,9 +16,11 @@ html {
     margin-top: 70px;
 }
 
+
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Lora','Inter', 'Montserrat', system-ui, sans-serif;
 }
+
 
 h1, h3 {
     color: rgb(12, 12, 112);
@@ -29,6 +31,11 @@ h1, h3 {
 .home-image {
     display: flex;
     justify-content: center;
+}
+
+.image-container {
+    align-self: center;
+    justify-self: center;
 }
 
 .recipe-list {
@@ -60,142 +67,126 @@ button {
     padding: 0px;
 }
 
-.dish button {
-    background-color: rgb(241, 241, 237);
-    color: black;
-}
-
 .dish {
     background-color: beige;
 }
 
-.dish h3, .dish h1 {
+.greenUnderline {
+    font-size: calc(1rem + 5px);
     color: green;
     text-decoration: underline;
+    
 }
 
-.nodesc-container {
+.nonDescriptionContainer {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 30px;
 }
 
 p {
     border-bottom: 20px solid transparent;
 }
 
-.ing-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.nodesc-container li:not(:last-child) {
+.nonDescriptionContainer li:not(:last-child) {
     padding-bottom: 5px;
 }
 
 .header-container {
     display: flex;
     justify-content: center;
-    background-color: inherit;
-}
-
-.header {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    width: 900px;
     align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: calc(1rem + 10px);
+    color: green;
+    text-decoration: underline;
 }
 
 .menu-container {
     display: flex;
-    height: 70px;
-    min-height: auto;
+    height: 8vh;
+    align-items: center;
     width: 100vw;
     padding: 0 20px;
-    margin: 0;
-    background-color: inherit;
-    position: fixed;
-    box-shadow: 0 2px 1px rgb(15 72 26 / 10%);
     top: 0;
+    background-color: beige;
+    position: fixed;
+    box-shadow: 0 2px 1px rgb(15 72 26 / 10%);   
 }
 
-.menu {
+footer {
     display: flex;
-    justify-content: flex-start;
-    height: 70px;
-    min-height: 70px;
-    max-height: 70px;
     align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 100vw;
+    background-color: rgb(202, 202, 181); 
 }
 
 #dish-name {
     margin: 20px 0;
 }
 
-.nodesc-container > div {
-    flex: 1;
-    padding: 0 20px;
+.descriptionContainer > div {
     flex-wrap: wrap; 
 }
 
-.desc {
+.description {
     flex: 2;
-    padding-right: 20px;
 }
 
-/* .desc-container:nth-child(2) {
-    align-items: center;
-} */
-
-.desc-container > div, .nodesc-container > div {
-    min-width: 400px;
-}
-
-.desc-container {
+.descriptionContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
     padding: 0px 20px;
     justify-content: center;
+    gap: 2rem;
 }
-
-/* .image-container {
-    flex: 0;
-    flex-shrink: 0;
-} */
 
 #dish-img {
     height: auto;
-    max-width: 400px;
+    width: 350px;
 }
 
-@media screen and (max-width: 800px) {
-    .desc-container {
+.ingredients > ul {
+    list-style: none;
+    text-align: center;
+}
+
+.steps {
+    flex: 0 0 1;
+    width: 50%;
+}
+
+.ingredients {
+    flex: 0 0 1;
+}
+
+@media (max-width: 800px) {
+    .descriptionContainer {
       flex-direction: column;
       align-items: center;
     }
 
-    #dish-image {
-        /* max-height: 400px; */
-        /* max-width: auto; */
+    .steps {
+        padding: 0 40px 20px 40px;
     }
 
-    .ing-container {
-        list-style-type: none;
+    .nonDescriptionContainer {
+        flex-direction: column;
         align-items: center;
-        padding: 0;
-        margin: 0;
     }
 
-    .ing-container > li {
-        padding: 0;
-        margin: 0;
-        text-align: center;
+    .ingredients > ul {
         list-style: none;
+        text-align: center;
     }
 
-    .steps-container > li {
-        padding: 0;
-        margin: 0;
-    }
+    /* .item:nth-child(n+2) {
+        background-color: lightcoral;
+      } */
 }
