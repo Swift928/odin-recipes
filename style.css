@@ -81,6 +81,14 @@ p {
     border-bottom: 20px solid transparent;
 }
 
+.dish *::-moz-selection {
+    background-color: rgb(142, 199, 142);
+}
+
+p::first-letter {
+    font-size: large;
+}
+
 .nonDescriptionContainer li:not(:last-child) {
     padding-bottom: 5px;
 }
