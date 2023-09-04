@@ -81,6 +81,10 @@ p {
     border-bottom: 20px solid transparent;
 }
 
+.dish *::selection {
+    background-color: rgb(142, 199, 142);
+}
+
 .dish *::-moz-selection {
     background-color: rgb(142, 199, 142);
 }
