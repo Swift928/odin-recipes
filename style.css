@@ -82,9 +82,16 @@ p:not(:last-child):not(:only-child) {
     border-bottom: 20px solid transparent;
 }
 
- .dish *::selection, .dish *::-webkit-selection {
+ /* .dish *::selection {
     background-color: rgb(142, 199, 142);
-}
+    -webkit-text-fill-color: rgb(142, 199, 142);;
+} */
+
+.dish *::selection {
+    -webkit-text-fill-color: black;
+    background-color:rgb(142, 199, 142);
+    /* color: orange; */
+    }
 
 p::first-letter {
     font-size: large;
